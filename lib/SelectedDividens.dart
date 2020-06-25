@@ -1,7 +1,7 @@
 import 'dropdown_button.dart';
 import 'package:flutter/material.dart';
 import 'package:custom_switch/custom_switch.dart';
-
+// CREATING STATEFUL BECAUSE OF DROPDOWN AND SWITCH BUTTON, WE CAN ITS USE LATER.
 class SelectedDividens extends StatefulWidget {
 
   @override
@@ -12,10 +12,8 @@ class _selected extends State<SelectedDividens> {
   double height;
   double width;
   bool isSwitched = false;
-  String dropdownValue="one";
-
-  Bank data=Bank("YES Bank LTD (YES B)","5,789.20","+4.00(5.28%)");
-  Dividens divdata=Dividens("0.77","2020-02-07","1.03%","NA","3M","2020-02-07");
+  Bank data=Bank("YES Bank LTD (YES B)","5,789.20","+4.00(5.28%)");    //Object of Class Bank
+  Dividens divdata=Dividens("0.77","2020-02-07","1.03%","NA","3M","2020-02-07");  // object if class Dividens
 
   void initState() {
     super.initState();
@@ -59,7 +57,7 @@ class _selected extends State<SelectedDividens> {
                           fontWeight: FontWeight.w600
 
                         ),),
-                        CustomSwitch(
+                        CustomSwitch(          //Using CustomSwitch Package for Switch Button
                           value: isSwitched,
                           onChanged: (value){
                             setState(() {
@@ -67,7 +65,6 @@ class _selected extends State<SelectedDividens> {
                               print(isSwitched);
                             });
                           },
-                          //activeTrackColor: Colors.lightGreenAccent,
                           activeColor: Colors.green,
 
                         ),
@@ -150,7 +147,7 @@ class _selected extends State<SelectedDividens> {
           Container(
               padding: EdgeInsets.only(right: 14/375*width),
               child: InkWell(
-                onTap: (){},//Add on tap on star button
+                onTap: (){},                                     //Add on tap on star button
                   child: Image.asset("assets/star.png")),
             )
         ],
@@ -306,7 +303,7 @@ class _selected extends State<SelectedDividens> {
     )
     );
   }
-  Container drop_down(){
+  Container drop_down(){     //Using Drop Down Class For Selection button
     return Container(
       padding: EdgeInsets.fromLTRB(0, 17/812*height, 18/390*width, 17/812*height),
       child: Row(
@@ -318,6 +315,7 @@ class _selected extends State<SelectedDividens> {
     );
   }
 }
+// Classes for Object Oriented Approach
 class Bank{
   String Name;
   String Amount;

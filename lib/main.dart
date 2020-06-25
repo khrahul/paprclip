@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'SF UI Display'
       ),
-      home: Navigation(),
+      home: Navigation(),// Home page to Navigation Bar
     );
   }
 }

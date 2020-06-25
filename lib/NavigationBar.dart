@@ -6,6 +6,7 @@ class Navigation extends StatefulWidget {
 }
 class _navigation extends State<Navigation> {
   int i = 0;
+  //Change here for Different Screens i Use only Screen 4 everywhere
   var pages = [
     new SelectedDividens(),
     new SelectedDividens(),
